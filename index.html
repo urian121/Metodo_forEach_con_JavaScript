@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Metodo forEach con JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row center">
+
+
+        <div class="col-md-12">
+          <h1 class="text-center">Método forEach en JavaScript Sin Rodeo</h1>
+          </div>
+
+          <div class="col-md-12">
+            <ol id="containerP"></ol>
+          </div>
+
+        </div>
+   </div> 
+   <script>
+    let habilidades = ['PHP','PYTHON','JAVASCRIPT','NODE.JS','VUEJS'];
+    let containerP = document.querySelector('#containerP');
+    containerP.innerHTML ="";
+    /*forma 1*/
+    habilidades.forEach(function(habildad){
+      console.log(habildad);
+      containerP.innerHTML += `<li>${habildad}</li>`;
+    });
+
+    /**forma 2 metodo de flecha*/
+    habilidades.forEach((h)=>{
+      console.log(h)
+    });
+
+    /**Forma 3*/
+    habilidades.forEach((hab, posicion)=>{
+      console.log(`Mi habilidad es: ${hab} e posiscion ${posicion}`);
+    });
+
+    /**forma 4*/
+    let i = 0;
+    habilidades.forEach((h)=>{
+      console.log(`Mi habilidad es: ${h} e posiscion ${i ++}`);
+    });
+   </script>
+  </body>
+</html>
